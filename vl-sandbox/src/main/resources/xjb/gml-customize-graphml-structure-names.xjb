@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jxb:bindings jxb:version="2.1"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/jaxb/bindingschema_2_0.xsd">
+    
+
+    <jxb:bindings schemaLocation="../xsd/graphml/1.1/graphml-structure.xsd">
+    
+        <jxb:globalBindings generateIsSetMethod="true"/>
+    
+        <jxb:bindings node="//xs:simpleType[@name='graph.edgedefault.type']">
+            <jxb:typesafeEnumClass name="EdgeDefaultType" /> 
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='key.for.type']">
+            <jxb:typesafeEnumClass name="KeyFor" /> 
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='key.type']">
+            <jxb:class name="Key" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='data.type']">
+            <jxb:class name="Data" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='default.type']">
+            <jxb:class name="Default" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='edge.type']">
+            <jxb:class name="Edge" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:simpleType[@name='endpoint.type.type']">
+            <jxb:typesafeEnumClass name="Endpoints" /> 
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='endpoint.type']">
+            <jxb:class name="Endpoint" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='graphml.type']">
+            <jxb:class name="GraphML" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='graph.type']">
+            <jxb:class name="Graph" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='hyperedge.type']">
+            <jxb:class name="HyperEdge" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='locator.type']">
+            <jxb:class name="Locator" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='node.type']">
+            <jxb:class name="Node" />
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='port.type']">
+            <jxb:class name="Port" />
+        </jxb:bindings>
+    </jxb:bindings>
+    
+</jxb:bindings>

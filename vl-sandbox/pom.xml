@@ -5,6 +5,8 @@
     <artifactId>vl-sandbox</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     
+    <name>Netbeans Visual Library Sandbox</name>
+    
     <packaging>jar</packaging>
 
     <properties>
@@ -44,5 +46,88 @@
             <version>1.2.1</version>
         </dependency>
     </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>2.3.1</version>
+                <executions>
+                    <!--                    <execution>
+                        <id>generate-mm-model</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>src/main/resources/xsd/MindMap-1.0.xsd</source>
+                            </sources>
+                            <packageName>org.medal.mindmap.model</packageName>
+                            <outputDirectory>${project.build.directory}/generated-resources/mm</outputDirectory>
+                        </configuration>
+                    </execution>-->
+                    <execution>
+                        <id>generate-gml-model</id>
+                        <goals>
+                            <goal>xjc</goal>
+                        </goals>
+                        <configuration>
+                            <target>2.1</target>
+                            
+                            <sources>
+                                <source>src/main/resources/xsd/graphml/1.1/graphml.xsd</source>
+                                <source>src/main/resources/xsd/graphml/1.1/graphml-structure.xsd</source>
+                                <!-- 
+                                <source>src/main/resources/xsd/graphml/1.1/graphml-attributes.xsd</source>
+                                <source>src/main/resources/xsd/graphml/1.1/graphml-parseinfo.xsd</source>
+                                -->
+                            </sources>
+                            <xjbSources>
+                                <xjbSource>src/main/resources/xjb/gml-customize-graphml-names.xjb</xjbSource>
+                                <xjbSource>src/main/resources/xjb/gml-customize-graphml-structure-names.xjb</xjbSource>
+                            </xjbSources>
+                            
+                            <packageName>org.graphdrawing.graphml</packageName>
+                            
+                            <outputDirectory>${project.build.directory}/generated-sources/GraphML</outputDirectory>
+                            
+                            <verbose>true</verbose>
+                            <extension>true</extension>
+                            <noGeneratedHeaderComments>true</noGeneratedHeaderComments>
+                            <enableIntrospection>true</enableIntrospection>
+                            
+                            <xsdPathWithinArtifact>META-INF/xsd</xsdPathWithinArtifact>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>            
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>1.14</version>
+                <!--                <goals>
+                    <goal>update-file-header</goal>
+                </goals>-->
+
+                <configuration>
+                    <organizationName>Community Code</organizationName>
+                    <inceptionYear>2017</inceptionYear>
+                    <licenseName>apache_v2</licenseName>
+                    <excludedScopes>
+                        <excludedScope>test</excludedScope>
+                        <excludedScope>provided</excludedScope>
+                    </excludedScopes>
+                    <includedLicenses>
+                        <includedLicense>apache_v2</includedLicense>
+                        <includedLicense>mit</includedLicense>
+                        <includedLicense>cddl_v1</includedLicense>
+                        <includedLicense>bsd_2</includedLicense>
+                        <includedLicense>bsd_3</includedLicense>
+                    </includedLicenses>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
