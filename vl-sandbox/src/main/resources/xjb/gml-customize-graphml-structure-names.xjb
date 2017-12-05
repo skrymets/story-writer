@@ -7,9 +7,6 @@
     
 
     <jxb:bindings schemaLocation="../xsd/graphml/1.1/graphml-structure.xsd">
-    
-        <jxb:globalBindings generateIsSetMethod="true"/>
-    
         <jxb:bindings node="//xs:simpleType[@name='graph.edgedefault.type']">
             <jxb:typesafeEnumClass name="EdgeDefaultType" /> 
         </jxb:bindings>

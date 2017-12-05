@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jxb:bindings jxb:version="2.1"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/jaxb/bindingschema_2_0.xsd">
+
+    
+    <jxb:bindings schemaLocation="../xsd/yworks/ygraphics.xsd">
+        <jxb:bindings node="//xs:complexType[@name='Node.type']">
+            <jxb:class name="YNodeType" /> 
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='Edge.type']">
+            <jxb:class name="YEdgeType" /> 
+        </jxb:bindings>
+    </jxb:bindings>
+
+</jxb:bindings>
