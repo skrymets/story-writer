@@ -1,19 +1,25 @@
-/*
- * Copyright 2017 skrymets.
- *
+
+package sandbox.netbeans.vl;
+
+/*-
+ * #%L
+ * Netbeans Visual Library Sandbox
+ * %%
+ * Copyright (C) 2017 Community Code
+ * %%
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * 
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
+ * 
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ * #L%
  */
-package sandbox.netbeans.vl;
 
 import org.netbeans.api.visual.widget.LabelWidget;
 
@@ -108,7 +114,7 @@ public class EditValueDialog extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EditValueDialog dialog = new EditValueDialog(new javax.swing.JFrame(), true);
+                EditValueDialog dialog = new EditValueDialog(null, new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
