@@ -210,7 +210,13 @@
                 <groupId>${project.groupId}</groupId>
                 <artifactId>writer-application-branding</artifactId>
                 <version>${project.version}</version>
-            </dependency>         
+            </dependency>
+            
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>writer-application-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     
@@ -270,8 +276,9 @@
     </build>
     
     <modules>
+        <!--        <module>sandbox-application</module>-->
         <module>modules/application</module>
         <module>modules/branding</module>
-        <!--        <module>sandbox-application</module>-->
+        <module>modules/core</module>
     </modules>
 </project>
