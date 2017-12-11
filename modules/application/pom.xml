@@ -23,7 +23,7 @@
             <groupId>org.netbeans.cluster</groupId>
             <artifactId>platform</artifactId>
             <type>pom</type>
-<!--            <exclusions>
+            <exclusions>
                 <exclusion>
                     <artifactId>org-jdesktop-layout</artifactId>
                     <groupId>org.netbeans.api</groupId>
@@ -93,14 +93,6 @@
                     <groupId>org.netbeans.api</groupId>
                 </exclusion>
                 <exclusion>
-                    <artifactId>org-netbeans-modules-editor-mimelookup</artifactId>
-                    <groupId>org.netbeans.modules</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>org-netbeans-modules-editor-mimelookup-impl</artifactId>
-                    <groupId>org.netbeans.modules</groupId>
-                </exclusion>
-                <exclusion>
                     <artifactId>org-netbeans-modules-print</artifactId>
                     <groupId>org.netbeans.api</groupId>
                 </exclusion>
@@ -110,10 +102,6 @@
                 </exclusion>
                 <exclusion>
                     <artifactId>org-netbeans-modules-javahelp</artifactId>
-                    <groupId>org.netbeans.api</groupId>
-                </exclusion>
-                <exclusion>
-                    <artifactId>org-netbeans-modules-sampler</artifactId>
                     <groupId>org.netbeans.api</groupId>
                 </exclusion>
                 <exclusion>
@@ -173,18 +161,34 @@
                     <artifactId>org-netbeans-html-ko4j</artifactId>
                 </exclusion>
                 <exclusion>
+                    <groupId>org.netbeans.external</groupId>
+                    <artifactId>org-netbeans-html-xhr4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.modules</groupId>
+                    <artifactId>org-netbeans-modules-editor-mimelookup</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.netbeans.modules</groupId>
+                    <artifactId>org-netbeans-modules-editor-mimelookup-impl</artifactId>
+                </exclusion>
+            </exclusions>
+            <!--        
+            <exclusions>
+                <exclusion>
                     <groupId>org.netbeans.api</groupId>
                     <artifactId>org-netbeans-spi-quicksearch</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>org.netbeans.external</groupId>
-                    <artifactId>org-netbeans-html-xhr4j</artifactId>
+                    <artifactId>org-netbeans-modules-sampler</artifactId>
+                    <groupId>org.netbeans.api</groupId>
                 </exclusion>
                 <exclusion>
                     <groupId>org.netbeans.api</groupId>
                     <artifactId>org-netbeans-modules-editor-mimelookup</artifactId>
                 </exclusion>
-            </exclusions>-->
+            </exclusions>
+            -->
         </dependency>
         
         <dependency>
