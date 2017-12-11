@@ -280,5 +280,6 @@
         <module>modules/application</module>
         <module>modules/branding</module>
         <module>modules/core</module>
+        <module>modules/writer-mindmap-project-api</module>
     </modules>
 </project>
