@@ -174,27 +174,21 @@
                 <artifactId>org-openide-io</artifactId>
                 <version>${version.netbeans-platform}</version>
             </dependency>
-            
-            
             <dependency>
                 <groupId>org.netbeans.modules</groupId>
                 <artifactId>org-netbeans-modules-options-keymap</artifactId>
                 <version>${version.netbeans-platform}</version>
             </dependency>
-            
             <dependency>
                 <groupId>org.netbeans.modules</groupId>
                 <artifactId>org-netbeans-core-output2</artifactId>
                 <version>${version.netbeans-platform}</version>
             </dependency>
-            
             <dependency>
                 <groupId>org.netbeans.modules</groupId>
                 <artifactId>org-netbeans-modules-masterfs</artifactId>
                 <version>${version.netbeans-platform}</version>
             </dependency>
-
-            
             <dependency>
                 <groupId>org.netbeans.api</groupId>
                 <artifactId>org-netbeans-modules-nbjunit</artifactId>
@@ -208,15 +202,16 @@
             <!-- ********************************************************************* -->
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>writer-application-branding</artifactId>
+                <artifactId>writer-application-all</artifactId>
                 <version>${project.version}</version>
             </dependency>
             
             <dependency>
                 <groupId>${project.groupId}</groupId>
-                <artifactId>writer-application-core</artifactId>
+                <artifactId>writer-application</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            
         </dependencies>
     </dependencyManagement>
     
@@ -276,10 +271,7 @@
     </build>
     
     <modules>
-        <!--        <module>sandbox-application</module>-->
         <module>modules/application</module>
-        <module>modules/branding</module>
-        <module>modules/core</module>
-        <module>modules/writer-mindmap-project-api</module>
+        <module>modules/all</module>
     </modules>
 </project>
