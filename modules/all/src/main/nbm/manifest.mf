@@ -2,3 +2,5 @@ Manifest-Version: 1.0
 AutoUpdate-Essential-Module: true
 OpenIDE-Module-Layer: org/tigri/writer/all/layer.xml
 OpenIDE-Module-Localizing-Bundle: org/tigri/writer/all/Bundle.properties
+OpenIDE-Module-Requires: org.openide.windows.WindowManager
+OpenIDE-Module-Install: org/tigri/writer/mindmap/Installer.class

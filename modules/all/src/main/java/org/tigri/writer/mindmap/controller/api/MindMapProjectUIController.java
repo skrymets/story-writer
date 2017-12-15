@@ -1,8 +1,3 @@
-package org.tigri.writer.mindmap.project.api;
-
-import java.util.Optional;
-import java.util.Set;
-
 /*
  * Copyright 2017 skrymets.
  *
@@ -18,19 +13,37 @@ import java.util.Set;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.tigri.writer.mindmap.controller.api;
+
+import java.io.File;
+import org.tigri.writer.mindmap.project.api.MindMapProject;
+
 /**
  *
  * @author skrymets
  */
-public interface Projects {
+public interface MindMapProjectUIController {
 
-    Set<MindMapProject> getProjects();
+    public MindMapProject getCurrentProject();
 
-    void setCurrentProject(MindMapProject project);
+    public boolean canNewProject();
 
-    Optional<MindMapProject> getCurrentProject();
+    public MindMapProject newProject();
 
-    void addProject(MindMapProject project);
+    public boolean canOpenProject();
 
-    void removeProject(MindMapProject project);
+    public void openProject();
+    
+    public boolean canSaveProject();
+
+    public void saveProject();
+
+    public boolean canSaveAsProject();
+
+    public void saveAsProject();
+
+    public boolean canCloseProject();
+
+    public void closeProject();
+
 }

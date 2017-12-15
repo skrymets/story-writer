@@ -1,8 +1,5 @@
 package org.tigri.writer.mindmap.project.api;
 
-import java.util.Optional;
-import java.util.Set;
-
 /*
  * Copyright 2017 skrymets.
  *
@@ -18,19 +15,19 @@ import java.util.Set;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import org.openide.util.Lookup;
+
 /**
  *
  * @author skrymets
  */
-public interface Projects {
+public interface MindMapProject extends Lookup.Provider {
 
-    Set<MindMapProject> getProjects();
+    @Override
+    Lookup getLookup();
 
-    void setCurrentProject(MindMapProject project);
+    void add(Object inst);
 
-    Optional<MindMapProject> getCurrentProject();
+    void remove(Object inst);
 
-    void addProject(MindMapProject project);
-
-    void removeProject(MindMapProject project);
 }

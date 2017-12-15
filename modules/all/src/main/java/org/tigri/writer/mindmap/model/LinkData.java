@@ -1,8 +1,3 @@
-package org.tigri.writer.mindmap.project.api;
-
-import java.util.Optional;
-import java.util.Set;
-
 /*
  * Copyright 2017 skrymets.
  *
@@ -18,19 +13,37 @@ import java.util.Set;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.tigri.writer.mindmap.model;
+
+import java.io.Serializable;
+
 /**
  *
  * @author skrymets
  */
-public interface Projects {
+public class LinkData implements Serializable {
 
-    Set<MindMapProject> getProjects();
+    private static final long serialVersionUID = 8414189590107405970L;
 
-    void setCurrentProject(MindMapProject project);
+    public static enum LinkType {
+        /**
+         * Means parent-child relation
+         */
+        DETAIL,
+        /**
+         * Means arbitrary reference for any other node in the map
+         */
+        REFERENCE;
+    }
 
-    Optional<MindMapProject> getCurrentProject();
+    private final LinkType type;
 
-    void addProject(MindMapProject project);
+    public LinkData(LinkType type) {
+        this.type = type;
+    }
 
-    void removeProject(MindMapProject project);
+    public LinkType getType() {
+        return type;
+    }
+
 }

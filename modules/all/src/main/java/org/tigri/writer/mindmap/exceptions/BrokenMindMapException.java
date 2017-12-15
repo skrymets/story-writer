@@ -1,8 +1,3 @@
-package org.tigri.writer.mindmap.project.api;
-
-import java.util.Optional;
-import java.util.Set;
-
 /*
  * Copyright 2017 skrymets.
  *
@@ -18,19 +13,22 @@ import java.util.Set;
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.tigri.writer.mindmap.exceptions;
+
 /**
  *
  * @author skrymets
  */
-public interface Projects {
+public class BrokenMindMapException extends RuntimeException {
+    
+    private static final long serialVersionUID = 5379504865897793888L;
 
-    Set<MindMapProject> getProjects();
+    public BrokenMindMapException(String string) {
+        super(string);
+    }
 
-    void setCurrentProject(MindMapProject project);
-
-    Optional<MindMapProject> getCurrentProject();
-
-    void addProject(MindMapProject project);
-
-    void removeProject(MindMapProject project);
+    public BrokenMindMapException(String string, Throwable thrwbl) {
+        super(string, thrwbl);
+    }
+    
 }

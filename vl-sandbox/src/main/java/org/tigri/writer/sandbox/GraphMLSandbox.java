@@ -15,6 +15,7 @@
  */
 package org.tigri.writer.sandbox;
 
+import org.tigri.writer.mindmap.view.MindMapLayout;
 import java.awt.Rectangle;
 import javax.swing.JComponent;
 import javax.xml.bind.JAXBContext;
@@ -42,12 +43,12 @@ import org.netbeans.api.visual.widget.Scene;
 import org.netbeans.api.visual.widget.Widget;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.tigri.writer.sandbox.mm.controller.api.MindMapController;
-import org.tigri.writer.sandbox.mm.controller.MindMapControllerImpl;
-import org.tigri.writer.sandbox.mm.model.MindMap;
-import org.tigri.writer.sandbox.mm.model.MindMapLink;
-import org.tigri.writer.sandbox.mm.model.MindMapNode;
-import org.tigri.writer.sandbox.mm.view.MindMapScene;
+import org.tigri.writer.mindmap.controller.api.MindMapController;
+import org.tigri.writer.mindmap.controller.MindMapControllerImpl;
+import org.tigri.writer.mindmap.model.MindMap;
+import org.tigri.writer.mindmap.model.MindMapLink;
+import org.tigri.writer.mindmap.model.MindMapNode;
+import org.tigri.writer.mindmap.view.MindMapScene;
 
 /**
  *
